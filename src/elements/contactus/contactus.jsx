@@ -16,13 +16,13 @@ class ContactUs extends Component {
           <h5>Connect & Contact Us</h5>
           <div className="icon-button-contactus">
             <a href={this.state.instagram}>
-              <i className="fab fa-instagram"></i>
+              <i className="fa fa-instagram"></i>
             </a>
             <a href={this.state.facebook}>
-              <i className="fab fa-facebook"></i>
+              <i className="fa fa-facebook"></i>
             </a>
             <a href={this.state.linkedin}>
-              <i className="fab fa-linkedin"></i>
+              <i className="fa fa-linkedin"></i>
             </a>
             <a href={this.state.mail}>
               <i className="fa fa-envelope"></i>

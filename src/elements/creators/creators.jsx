@@ -34,16 +34,15 @@ class Creators extends Component {
                 rel="noopener noreferrer"
                 className="icon-button linkedin"
               >
-                <i className="fab fa-linkedin"></i>
+                <i className="fa fa-linkedin"></i>
               </a>
-
               <a
                 href={creator.github}
                 className="icon-button github"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-github"></i>
+                <i className="fa fa-github"></i>
               </a>
             </p>
           ))}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css"
-import "@fortawesome/fontawesome-svg-core"
+import "font-awesome/css/font-awesome.css"
 
 import Header from "./components/header/header";
 import CarouselMapped from "./components/carousel/carousel.jsx";
