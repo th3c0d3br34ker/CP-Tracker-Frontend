@@ -1,14 +1,7 @@
-.App {
-  text-align: center;
-}
+@import "./components/header/header.css";
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@import "./components/posts/postCard.css";
+
+@import "./components/midSection/midSection.css";
+
+@import "./components/footer/footer.css";

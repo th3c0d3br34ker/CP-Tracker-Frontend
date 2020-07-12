@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./postCard.css";
-
 export default function PostCard({ cardInfo }) {
   return (
     <div className="col-md-4 postcard">
@@ -17,7 +15,7 @@ export default function PostCard({ cardInfo }) {
         <div className="card-body">
           <h4 className="card-title">{cardInfo.heading}</h4>
           <p className="card-text">{cardInfo.text}</p>
-          <a href="#" className="btn btn-success">
+          <a href="https://www.google.com" className="btn btn-success">
             Practise
           </a>
         </div>
