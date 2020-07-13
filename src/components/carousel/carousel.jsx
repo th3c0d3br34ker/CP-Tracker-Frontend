@@ -6,34 +6,31 @@ import Image from "react-bootstrap/Image";
 class CarouselMapped extends Component {
   render() {
     return (
-      <Carousel
-        pause={false}
-        indicators={false}
-        interval="2000"
-        controls={false}
-      >
-        <Carousel.Item>
-          <Image
-            fluid={true}
-            src={require("../../assets/cp-carousel.png")}
-            alt="Competitive Programming"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image
-            fluid={true}
-            src={require("../../assets/python-carousel.png")}
-            alt="Competitive Programming"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image
-            fluid={true}
-            src={require("../../assets/cpp-carousel.png")}
-            alt="Competitive Programming"
-          />
-        </Carousel.Item>
-      </Carousel>
+      <div>
+        <Carousel indicators={false} interval="2000" controls={false}>
+          <Carousel.Item>
+            <Image
+              fluid={true}
+              src={require("../../assets/cp-carousel.png")}
+              alt="Competitive Programming"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image
+              fluid={true}
+              src={require("../../assets/python-carousel.png")}
+              alt="Competitive Programming"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image
+              fluid={true}
+              src={require("../../assets/cpp-carousel.png")}
+              alt="Competitive Programming"
+            />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     );
   }
 }
