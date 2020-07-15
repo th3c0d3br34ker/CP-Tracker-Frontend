@@ -10,28 +10,9 @@ class Posts extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8000/api/postcard/")
+      .get("https://cp-track.herokuapp.com/api/postcard/")
       .then((response) => {
-        // Temporary Workaround
-        let posts = [];
-        let post;
-        let each;
-        for (each of response.data) {
-          let Info;
-          Info = {
-            heading: each.heading,
-            alt: each.alt,
-            image: each.image,
-            text: each.text,
-          };
-          post = {
-            id: each.id,
-            cardInfo: Info,
-          };
-
-          posts.push(post);
-        }
-        this.setState({ posts: posts });
+        this.setState({ posts: response.data });
       })
       .catch((error) => {
         console.log(error);
@@ -43,7 +24,7 @@ class Posts extends Component {
       <div className="container" id="practise">
         <div className="row justify-content-center">
           {this.state.posts.map((post) => (
-            <PostCard key={post.id} cardInfo={post.cardInfo} />
+            <PostCard key={post.id} cardInfo={post} />
           ))}
         </div>
       </div>

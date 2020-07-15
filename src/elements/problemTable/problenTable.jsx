@@ -8,11 +8,12 @@ export default function ProblemTable({ rowInfo }) {
         <tr className="active-row text-center">
           <td>{rowInfo.id}</td>
           <td>{rowInfo.topic}</td>
+          <td>{rowInfo.difficulty_level}</td>
           <td>
-            <a href="https://www.google.com">{rowInfo.link}</a>
+            <a href={rowInfo.prob_link}>{rowInfo.prob_name}</a>
           </td>
           <td>
-            <a href="https://www.google.com">{rowInfo.solution}</a>
+            <a href={rowInfo.sol_link}>SOLUTION</a>
           </td>
         </tr>
       </React.Fragment>
@@ -23,11 +24,12 @@ export default function ProblemTable({ rowInfo }) {
       <tr className="text-center">
         <td>{rowInfo.id}</td>
         <td>{rowInfo.topic}</td>
+        <td>{rowInfo.difficulty_level}</td>
         <td>
-          <a href="https://www.google.com">{rowInfo.link}</a>{" "}
+          <a href={rowInfo.prob_link}>{rowInfo.prob_name}</a>
         </td>
         <td>
-          <a href="https://www.google.com">{rowInfo.solution}</a>
+          <a href={rowInfo.sol_link}>SOLUTION</a>
         </td>
       </tr>
     </React.Fragment>

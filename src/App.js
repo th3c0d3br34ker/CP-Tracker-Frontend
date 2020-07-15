@@ -6,8 +6,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
 
 import HomePage from "./pages/homePage.jsx";
-import CPPage from "./pages/cpPage.jsx";
 import ProblemPage from "./pages/problemPage.jsx";
+import PythonPage from "./pages/pythonPage.jsx";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
         <Route path="/problem">
           <ProblemPage />
         </Route>
-        <Route path="/cp">
-          <CPPage />
+        <Route path="/python">
+          <PythonPage />
         </Route>
         <Route path="/">
           <HomePage />

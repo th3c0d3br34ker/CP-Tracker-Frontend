@@ -1,36 +1,33 @@
 import React, { Component } from "react";
 
-import Carousel from "react-bootstrap/Carousel";
-import Image from "react-bootstrap/Image";
+import { Container, Image, Carousel } from "react-bootstrap";
 
 class CarouselMapped extends Component {
   render() {
     return (
-      <div>
-        <Carousel indicators={false} interval="2000" controls={false}>
+      <Container>
+        <Carousel indicators={false} interval={2000} controls={false}>
           <Carousel.Item>
             <Image
-              fluid={true}
-              src={require("../../assets/cp-carousel.png")}
+              className="d-block"
+              src={require("../../assets/img1-carousel.svg")}
               alt="Competitive Programming"
             />
           </Carousel.Item>
           <Carousel.Item>
             <Image
-              fluid={true}
-              src={require("../../assets/python-carousel.png")}
+              src={require("../../assets/img2-carousel.svg")}
               alt="Competitive Programming"
             />
           </Carousel.Item>
           <Carousel.Item>
             <Image
-              fluid={true}
-              src={require("../../assets/cpp-carousel.png")}
+              src={require("../../assets/img3-carousel.svg")}
               alt="Competitive Programming"
             />
           </Carousel.Item>
         </Carousel>
-      </div>
+      </Container>
     );
   }
 }

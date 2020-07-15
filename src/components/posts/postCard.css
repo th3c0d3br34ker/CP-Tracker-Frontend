@@ -13,6 +13,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -20,51 +21,5 @@
 .card-body {
   height: 180px;
   padding: 10px;
-}
-@media only screen and (max-width: 1199px) {
-  .card-body {
-    height: 240px;
-    padding: 10px;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .card-title {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .postcard {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 80px;
-    margin-right: 80px;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .postcard {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .inner {
-    height: 200px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .postcard {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  .card-title {
-    font-size: 1.5rem;
-  }
-  .card-text {
-    font-size: 1rem;
-  }
-  .inner {
-    height: 200px;
-  }
+  margin-bottom: 30px;
 }

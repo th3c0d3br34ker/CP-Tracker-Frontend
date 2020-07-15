@@ -8,8 +8,9 @@ export default function TutorialTable({ rowInfo }) {
         <tr className="text-center active-row p-5">
           <td>{rowInfo.id}</td>
           <td>{rowInfo.topic}</td>
+          <td>{rowInfo.source}</td>
           <td>
-            <a href={rowInfo.link}>VISIT</a>
+            <a href={rowInfo.tut_link}>VISIT</a>
           </td>
         </tr>
       </React.Fragment>
@@ -20,8 +21,9 @@ export default function TutorialTable({ rowInfo }) {
       <tr className="text-center">
         <td>{rowInfo.id}</td>
         <td>{rowInfo.topic}</td>
+        <td>{rowInfo.source}</td>
         <td>
-          <a href={rowInfo.link}>VISIT</a>{" "}
+          <a href={rowInfo.tut_link}>VISIT</a>
         </td>
       </tr>
     </React.Fragment>

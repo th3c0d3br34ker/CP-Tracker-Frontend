@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 
 class MidGreeting extends Component {
   state = {
@@ -14,12 +13,14 @@ class MidGreeting extends Component {
   };
   render() {
     return (
-      <Row>
-        <div className="justify-content-around p-4 bg-dark text-center text-white">
-          <div className="justify-content-between m-3">
-            <h2>We help you to practise!</h2>
-            <p>{this.state.text1}</p>
-          </div>
+      <Container>
+        <div className="flex-column d-flex p-4 bg-dark text-center text-white">
+          <Row>
+            <div className="justify-content-between">
+              <h2>We help you to practise!</h2>
+              <p>{this.state.text1}</p>
+            </div>
+          </Row>
           <Row>
             <Col>
               <h4>Our Mission</h4>
@@ -31,7 +32,7 @@ class MidGreeting extends Component {
             </Col>
           </Row>
         </div>
-      </Row>
+      </Container>
     );
   }
 }

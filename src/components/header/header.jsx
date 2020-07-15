@@ -1,29 +1,18 @@
 import React, { Component } from "react";
 
-import Image from "react-bootstrap/Image";
-
-import Login from "../../elements/loginSignup/loginSignup.jsx";
+import { Navbar, Image } from "react-bootstrap";
 
 class Header extends Component {
-  state = {
-    username: "username",
-  };
-
   render() {
-    function LoggedIn(props) {
-      if (props.username !== "username") {
-        return <div className="username">{props.username}</div>;
-      }
-      return <Login />;
-    }
     return (
-      <div className="header">
-        <div className="logo">
+      <Navbar fixed="top" className="custom-navbar shadow">
+        <Navbar.Brand>
           <Image src={require("../../assets/logo.png")} alt="logo" width="40" />
+        </Navbar.Brand>
+        <div>
+          <h2 className="text-center header">Competitive Programming </h2>
         </div>
-        <h2>Competitive Programming </h2>
-        <LoggedIn username={this.state.username} />
-      </div>
+      </Navbar>
     );
   }
 }

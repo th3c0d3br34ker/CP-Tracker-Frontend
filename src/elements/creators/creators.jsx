@@ -10,11 +10,13 @@ class Creators extends Component {
         github: "https://github.com/th3c0d3br34ker",
       },
       {
+        id: 2,
         name: "Harsh Kanani ",
         linkedin: "https://in.linkedin.com/in/harsh-kanani-69a45818b",
         github: "https://github.com/harshkanani014",
       },
       {
+        id: 3,
         name: "Aayush Chodvadiya ",
         linkedin: "https://in.linkedin.com/in/aayush-chodvadiya-9122b418b",
         github: "https://github.com/aayush1607",
@@ -27,7 +29,7 @@ class Creators extends Component {
         <div className="d-flex flex-column text-white">
           <h5>Creators</h5>
           {this.state.creators.map((creator) => (
-            <p className="d-print-none" key={creator}>
+            <p className="d-print-none" key={creator.key}>
               {creator.name}
               <a
                 href={creator.linkedin}
