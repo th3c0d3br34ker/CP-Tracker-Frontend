@@ -1,11 +1,19 @@
 /* header */
 
 .header {
-  padding: 10px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
+  padding: 10px;
   color: white;
+
+  align-items: center;
 }
 
-.custom-navbar {
-  background-color: black;
+.logo {
+  height: 35px;
+  width: 35px;
+  margin-right: 25px;
+}
+
+.header-div {
+  justify-content: center;
 }

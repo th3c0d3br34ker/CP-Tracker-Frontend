@@ -1,18 +1,22 @@
 import React, { Component } from "react";
 
-import { Navbar, Image } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
 
 class Header extends Component {
   render() {
     return (
-      <Navbar fixed="top" className="custom-navbar shadow">
-        <Navbar.Brand>
-          <Image src={require("../../assets/logo.png")} alt="logo" width="40" />
-        </Navbar.Brand>
-        <div>
-          <h2 className="text-center header">Competitive Programming </h2>
+      <Container fluid={true} className="header-div bg-dark">
+        <div className="row header">
+          <Image
+            className="logo"
+            src={require("../../assets/logo.png")}
+            alt="logo"
+            width="40"
+          />
+
+          <h2>CP-Tracker</h2>
         </div>
-      </Navbar>
+      </Container>
     );
   }
 }

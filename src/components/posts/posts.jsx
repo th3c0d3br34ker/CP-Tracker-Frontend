@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import { Container } from "react-bootstrap";
+
 import PostCard from "./postCard.jsx";
 
 class Posts extends Component {
@@ -21,13 +23,13 @@ class Posts extends Component {
 
   render() {
     return (
-      <div className="container" id="practise">
-        <div className="row justify-content-center">
+      <Container id="practise">
+        <div className="row practice-container-div">
           {this.state.posts.map((post) => (
             <PostCard key={post.id} cardInfo={post} />
           ))}
         </div>
-      </div>
+      </Container>
     );
   }
 }

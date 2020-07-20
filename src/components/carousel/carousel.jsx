@@ -3,29 +3,40 @@ import React, { Component } from "react";
 import { Container, Image, Carousel } from "react-bootstrap";
 
 class CarouselMapped extends Component {
+  state = {
+    carouselImages: [
+      {
+        id: 1,
+        src: require("../../assets/img4-carousel.png"),
+      },
+      {
+        id: 2,
+        src: require("../../assets/img2-carousel.png"),
+      },
+      {
+        id: 3,
+        src: require("../../assets/img3-carousel.png"),
+      },
+      {
+        id: 4,
+        src: require("../../assets/img1-carousel.png"),
+      },
+    ],
+  };
   render() {
     return (
-      <Container>
-        <Carousel indicators={false} interval={2000} controls={false}>
-          <Carousel.Item>
-            <Image
-              className="d-block"
-              src={require("../../assets/img1-carousel.svg")}
-              alt="Competitive Programming"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <Image
-              src={require("../../assets/img2-carousel.svg")}
-              alt="Competitive Programming"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <Image
-              src={require("../../assets/img3-carousel.svg")}
-              alt="Competitive Programming"
-            />
-          </Carousel.Item>
+      <Container id="home" className="carousel-container">
+        <Carousel interval={2000}>
+          {this.state.carouselImages.map((image) => (
+            <Carousel.Item>
+              <Image
+                key={image.id}
+                className="w-100"
+                src={image.src}
+                alt="Competitive Programming"
+              />
+            </Carousel.Item>
+          ))}
         </Carousel>
       </Container>
     );

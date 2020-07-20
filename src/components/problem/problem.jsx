@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 import ProblemTable from "../../elements/problemTable/problenTable.jsx";
 import BackButton from "../../elements/backButton/backButton.jsx";
@@ -15,7 +15,6 @@ class Problem extends Component {
     axios
       .get(this.props.problem)
       .then((response) => {
-        console.log(response.data);
         this.setState({ rowsProblems: response.data });
       })
       .catch((error) => {
@@ -25,25 +24,29 @@ class Problem extends Component {
 
   render() {
     return (
-      <Container className="p-5">
-        <h2>Problems</h2>
-        <table className="content-table">
-          <thead>
-            <tr>
-              <th>Sr.</th>
-              <th>Topics</th>
-              <th>Difficulty Level</th>
-              <th>Problem Name</th>
-              <th>Solution</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.rowsProblems.map((row) => (
-              <ProblemTable key={row.id} rowInfo={row} />
-            ))}
-          </tbody>
-        </table>
-        <BackButton />
+      <Container className="p-4">
+        <h2 className="text-center p-2">Problems</h2>
+        <Row>
+          <table className="content-table">
+            <thead>
+              <tr>
+                <th>Sr.</th>
+                <th>Topics</th>
+                <th>Difficulty Level</th>
+                <th>Problem Name</th>
+                <th>Solution</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.rowsProblems.map((row) => (
+                <ProblemTable key={row.id} rowInfo={row} />
+              ))}
+            </tbody>
+          </table>
+        </Row>
+        <Row>
+          <BackButton />
+        </Row>
       </Container>
     );
   }

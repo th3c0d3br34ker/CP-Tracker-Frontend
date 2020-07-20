@@ -1,11 +1,8 @@
-.content-3 {
-  background-color: rgb(41, 40, 40);
-  font-size: large;
-}
 a {
   text-decoration: none;
   color: white;
 }
+
 .icons {
   display: flex;
   flex-direction: row;

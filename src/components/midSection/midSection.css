@@ -1,27 +1,5 @@
-.content-2 {
-  background-color: rgb(41, 40, 40);
-  color: white;
-}
-
-@media only screen and (max-width: 505px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 1.2rem;
-  }
-  .content-2 {
-    font-size: 0.7rem;
-  }
-}
-@media only screen and (max-width: 800px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 1.2rem;
-  }
-  .content-2 {
-    font-size: 0.7rem;
-  }
+.mid-section-div {
+  color: black;
+  text-align: center;
+  padding-top: 40px;
 }

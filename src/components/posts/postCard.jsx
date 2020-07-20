@@ -1,25 +1,22 @@
 import React from "react";
 
+import { Card, Button } from "react-bootstrap";
+
 export default function PostCard({ cardInfo }) {
   return (
-    <div className="col-md-4 postcard">
-      <div className="card shadow">
-        <div className="inner">
-          <img
-            className="card-img-top"
-            src={cardInfo.image}
-            alt={cardInfo.alt}
-          />
-        </div>
-
-        <div className="card-body">
-          <h4 className="card-title">{cardInfo.heading}</h4>
-          <p className="card-text">{cardInfo.text}</p>
-          <a href={cardInfo.link} className="btn btn-success">
-            Practise
-          </a>
-        </div>
-      </div>
-    </div>
+    <Card className="postcard">
+      <Card.Img
+        src={cardInfo.image}
+        alt={cardInfo.alt}
+        className="card-img-top"
+      />
+      <Card.Body>
+        <Card.Title>{cardInfo.heading}</Card.Title>
+        <Card.Text> {cardInfo.text}</Card.Text>
+        <Button href={cardInfo.link} variant="success">
+          Practice
+        </Button>
+      </Card.Body>
+    </Card>
   );
 }
