@@ -1,8 +1,8 @@
 {
   "name": "frontend",
-  "homepage": "th3c0d3br34ker.github.io/CP-Tracker-Frontend/",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cp-tracks.herokuapp.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
