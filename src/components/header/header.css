@@ -1,13 +1,5 @@
 /* header */
 
-.header {
-  margin: 0 auto;
-  padding: 10px;
-  color: white;
-
-  align-items: center;
-}
-
 .logo {
   height: 35px;
   width: 35px;
@@ -15,5 +7,11 @@
 }
 
 .header-div {
+  margin: 0 auto;
+  padding: 10px;
+  color: white;
+  align-items: center;
+  text-align: center;
+  background-color: #080808;
   justify-content: center;
 }
