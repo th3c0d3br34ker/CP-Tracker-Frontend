@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -9,9 +9,9 @@ import HomePage from "./pages/homePage.jsx";
 import ProblemPage from "./pages/problemPage.jsx";
 import PythonPage from "./pages/pythonPage.jsx";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename="/">
       <Switch>
         <Route path="/problem">
           <ProblemPage />
@@ -23,8 +23,6 @@ function App() {
           <HomePage />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
-
-export default App;
