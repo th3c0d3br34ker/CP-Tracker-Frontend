@@ -2,7 +2,7 @@
   margin-top: 50px;
   margin: 20px;
   padding: 8px;
-  height: 350px;
+  height: 380px;
   width: 300px;
   box-shadow: 5px 10px rgba(155, 155, 155, 0.6);
 }
@@ -15,9 +15,18 @@
   height: 150px;
   width: 160px;
 }
+.card-text {
+  height: 90px;
+}
 
 @media only screen and (max-width: 780px) {
   .practice-container-div {
     justify-content: center;
+  }
+  .postcard {
+    height: fit-content;
+  }
+  .card-text {
+    height: fit-content;
   }
 }
