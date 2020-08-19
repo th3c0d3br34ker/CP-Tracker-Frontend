@@ -8,6 +8,8 @@ import "font-awesome/css/font-awesome.css";
 import HomePage from "./pages/homePage.jsx";
 import ProblemPage from "./pages/problemPage.jsx";
 import PythonPage from "./pages/pythonPage.jsx";
+import CppPage from "./pages/cppPage.jsx";
+import JavaPage from "./pages/javaPage.jsx";
 
 export default function App() {
   return (
@@ -18,6 +20,12 @@ export default function App() {
         </Route>
         <Route path="/python">
           <PythonPage />
+        </Route>
+        <Route path="/java">
+          <JavaPage />
+        </Route>
+        <Route path="/cpp">
+          <CppPage />
         </Route>
         <Route path="/">
           <HomePage />
