@@ -14,6 +14,11 @@ class PythonPage extends Component {
       "https://cp-track.herokuapp.com/api/postcard/python/python-problem",
   };
 
+  componentDidMount() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   render() {
     return (
       <React.Fragment>

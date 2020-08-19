@@ -11,6 +11,12 @@ class ProblemPage extends Component {
     tutorial: "https://cp-track.herokuapp.com/api/postcard/cp/cp-tutorial",
     problem: "https://cp-track.herokuapp.com/api/postcard/cp/cp-problem",
   };
+
+  componentDidMount() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   render() {
     return (
       <React.Fragment>
