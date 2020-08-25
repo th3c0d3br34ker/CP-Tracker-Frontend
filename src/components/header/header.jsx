@@ -12,7 +12,7 @@ export default function Header() {
         width="40"
       />
 
-      <h2>{"CP-Tracker"}</h2>
+      <h2 className="heading">{"CP-Tracks"}</h2>
     </Container>
   );
 }

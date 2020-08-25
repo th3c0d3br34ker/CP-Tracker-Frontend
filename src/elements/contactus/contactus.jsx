@@ -3,10 +3,9 @@ import "./contactus.css";
 
 class ContactUs extends Component {
   state = {
-    instagram: "instagram",
-    facebook: "facebook",
-    linkedin: "github",
-    mail: "mail",
+    instagram: "https://www.instagram.com/cptracks/",
+    linkedin: "https://www.linkedin.com/company/cp-tracks/",
+    mail: "mailto:cptracksreachout@gmail.com",
   };
   render() {
     return (
@@ -16,9 +15,7 @@ class ContactUs extends Component {
           <a href={this.state.instagram}>
             <i className="fa fa-instagram"></i>
           </a>
-          <a href={this.state.facebook}>
-            <i className="fa fa-facebook"></i>
-          </a>
+
           <a href={this.state.linkedin}>
             <i className="fa fa-linkedin"></i>
           </a>
