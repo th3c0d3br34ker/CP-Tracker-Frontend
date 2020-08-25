@@ -8,8 +8,8 @@ import Footer from "../components/footer/footer.jsx";
 
 class CppPage extends Component {
   state = {
-    tutorial: "https://cp-track.herokuapp.com/api/postcard/CPP/CPP-tutorial",
-    problem: "https://cp-track.herokuapp.com/api/postcard/CPP/CPP-problem",
+    tutorial: "https://cp-tracker.herokuapp.com/api/postcard/CPP/CPP-tutorial",
+    problem: "https://cp-tracker.herokuapp.com/api/postcard/CPP/CPP-problem",
   };
 
   componentDidMount() {

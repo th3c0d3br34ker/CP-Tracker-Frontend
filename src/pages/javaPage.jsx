@@ -8,8 +8,9 @@ import Footer from "../components/footer/footer.jsx";
 
 class JavaPage extends Component {
   state = {
-    tutorial: "https://cp-track.herokuapp.com/api/postcard/java/java-tutorial",
-    problem: "https://cp-track.herokuapp.com/api/postcard/java/java-problem",
+    tutorial:
+      "https://cp-tracker.herokuapp.com/api/postcard/java/java-tutorial",
+    problem: "https://cp-tracker.herokuapp.com/api/postcard/java/java-problem",
   };
 
   componentDidMount() {

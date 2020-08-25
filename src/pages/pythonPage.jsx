@@ -9,9 +9,9 @@ import Footer from "../components/footer/footer.jsx";
 class PythonPage extends Component {
   state = {
     tutorial:
-      "https://cp-track.herokuapp.com/api/postcard/python/python-tutorial",
+      "https://cp-tracker.herokuapp.com/api/postcard/python/python-tutorial",
     problem:
-      "https://cp-track.herokuapp.com/api/postcard/python/python-problem",
+      "https://cp-tracker.herokuapp.com/api/postcard/python/python-problem",
   };
 
   componentDidMount() {

@@ -8,8 +8,8 @@ import Footer from "../components/footer/footer.jsx";
 
 class ProblemPage extends Component {
   state = {
-    tutorial: "https://cp-track.herokuapp.com/api/postcard/cp/cp-tutorial",
-    problem: "https://cp-track.herokuapp.com/api/postcard/cp/cp-problem",
+    tutorial: "https://cp-tracker.herokuapp.com/api/postcard/cp/cp-tutorial",
+    problem: "https://cp-tracker.herokuapp.com/api/postcard/cp/cp-problem",
   };
 
   componentDidMount() {
