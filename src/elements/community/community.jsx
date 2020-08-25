@@ -5,7 +5,6 @@ class Community extends Component {
     home: "/#home",
     practice: "/#practice",
     about: "/#about",
-    blog: "#blog",
   };
   render() {
     return (
@@ -15,7 +14,7 @@ class Community extends Component {
           Home
         </a>
         <a href={this.state.practice} className="text-white">
-          Practise
+          Practice
         </a>
         <a href={this.state.about} className="text-white">
           About Us

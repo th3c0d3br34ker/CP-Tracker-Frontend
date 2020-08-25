@@ -16,9 +16,9 @@ class Posts extends Component {
     window.scroll({
       top: 0,
     });
+
     this.setState({ isLoading: true }, () => {
-      console.log("Loading...");
-      Axios.get("https://cp-track.herokuapp.com/api/postcard/")
+      Axios.get("https://cp-tracker.herokuapp.com/api/postcard/")
         .then((response) => {
           this.setState({ posts: response.data, isLoading: false });
         })
@@ -30,7 +30,7 @@ class Posts extends Component {
 
   render() {
     return (
-      <Container id="practise">
+      <Container id="practice">
         {this.state.isLoading ? (
           <Loading />
         ) : (

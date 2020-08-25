@@ -3,6 +3,9 @@ a {
   color: white;
 }
 
+.footer-div {
+  background-color: #080808;
+}
 .icons {
   display: flex;
   flex-direction: row;
