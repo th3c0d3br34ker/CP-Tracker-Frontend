@@ -29,11 +29,12 @@ class Creators extends Component {
       <div className="d-flex flex-column text-center pt-2">
         <h5>Creators</h5>
         {this.state.creators.map((creator) => (
-          <p className="d-print-none" key={creator.key}>
+          <p className="d-print-none" key={creator.id}>
             {creator.name}
             <a
               href={creator.linkedin}
               target="_blank"
+              id
               rel="noopener noreferrer"
               className="icon-button linkedin"
             >

@@ -8,7 +8,7 @@ import Subscribe from "../../elements/subscribe/subscribe.jsx";
 
 export default function Footer() {
   return (
-    <Container fluid={true} className="footer-div bg-dark text-white">
+    <Container fluid={true} className="footer-div text-white">
       <Row>
         <Container>
           <div className="p-3">

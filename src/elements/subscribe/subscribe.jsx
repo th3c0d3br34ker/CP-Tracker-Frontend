@@ -36,7 +36,7 @@ class Subscribe extends Component {
   }
   render() {
     return (
-      <Container className="border-none bg-dark text-white">
+      <Container className="border-none text-white">
         <div className="p-3 ">
           <Row className="justify-content-center text-center">
             <h2>Subscribe Newsletter</h2>

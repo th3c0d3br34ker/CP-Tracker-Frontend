@@ -16,9 +16,7 @@ class ContactUs extends Component {
           <a href={this.state.instagram}>
             <i className="fa fa-instagram"></i>
           </a>
-          <a href={this.state.facebook}>
-            <i className="fa fa-facebook"></i>
-          </a>
+
           <a href={this.state.linkedin}>
             <i className="fa fa-linkedin"></i>
           </a>
