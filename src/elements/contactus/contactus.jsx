@@ -4,7 +4,7 @@ import "./contactus.css";
 class ContactUs extends Component {
   state = {
     instagram: "https://www.instagram.com/cptracks/",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/company/cp-tracks/",
     mail: "mailto:cptracksreachout@gmail.com",
   };
   render() {
