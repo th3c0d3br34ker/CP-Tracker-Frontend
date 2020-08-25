@@ -30,7 +30,7 @@ class Posts extends Component {
 
   render() {
     return (
-      <Container id="practise">
+      <Container id="practice">
         {this.state.isLoading ? (
           <Loading />
         ) : (
