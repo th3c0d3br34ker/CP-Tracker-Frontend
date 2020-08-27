@@ -7,7 +7,7 @@ export default function Header() {
     <Container fluid={true} className="row header-div">
       <Image
         className="logo"
-        src={require("../../assets/logo.png")}
+        src={require("../../assets/logo.webp")}
         alt="logo"
         width="40"
       />
