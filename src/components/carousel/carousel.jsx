@@ -7,19 +7,19 @@ class CarouselMapped extends Component {
     carouselImages: [
       {
         id: 1,
-        src: require("../../assets/img1-carousel.png"),
+        src: require("../../assets/img1-carousel.webp"),
       },
       {
         id: 2,
-        src: require("../../assets/img2-carousel.png"),
+        src: require("../../assets/img2-carousel.webp"),
       },
       {
         id: 3,
-        src: require("../../assets/img3-carousel.png"),
+        src: require("../../assets/img3-carousel.webp"),
       },
       {
         id: 4,
-        src: require("../../assets/img4-carousel.png"),
+        src: require("../../assets/img4-carousel.webp"),
       },
     ],
   };
