@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import Header from "../components/header/header.jsx";
-import CarouselMapped from "../components/carousel/carousel.jsx";
-import Posts from "../components/posts/posts.jsx";
-import MiddleGreeting from "../components/midSection/midSection.jsx";
+import CarouselMapped from "../components/carouselSection.jsx";
 import Footer from "../components/footer/footer.jsx";
+import Header from "../components/header/header.jsx";
+import MiddleGreeting from "../components/midSection/midSection.jsx";
+import Posts from "../components/posts/posts.jsx";
 
 class HomePage extends Component {
   render() {

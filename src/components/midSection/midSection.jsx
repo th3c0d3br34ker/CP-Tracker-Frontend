@@ -7,9 +7,9 @@ class MidGreeting extends Component {
     text1:
       "There is a lot of material out there for learning Coding. So don't worry. We have prepared different tracks for learning coding which covers all the necessary concepts and questions you have to do for mastering it.",
     text2:
-      "To empower each and every student interested in coding with power to code.",
+      "Our vision is to help people learn to code and develop the skill set needed to develop their own programs.  We hope to aid them in their learning process by making good quality practice exercises, study materials, etc accessible to them. We also want to make coding captivating by regularly updating our website with interesting and useful content.",
     text3:
-      "To grow this community and level up the coding enviornment that we have in today's world to next level.",
+      "Our vision is to create a nurturing environment for coding enthusiasts by making sure that everything they need for their learning process is available. We hope to build a strong community of aspiring programmers where they can collectively learn and share their knowledge.",
   };
   render() {
     return (
