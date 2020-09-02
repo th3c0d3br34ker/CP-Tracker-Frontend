@@ -1,6 +1,6 @@
-import React from "react";
-
 import { Container, Image } from "react-bootstrap";
+
+import React from "react";
 
 export default function Header() {
   return (
@@ -11,7 +11,6 @@ export default function Header() {
         alt="logo"
         width="40"
       />
-
       <h2 className="heading">{"CP-Tracks"}</h2>
     </Container>
   );

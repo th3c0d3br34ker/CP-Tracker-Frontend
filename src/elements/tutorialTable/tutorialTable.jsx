@@ -1,5 +1,6 @@
-import React from "react";
 import "./tutorialTable.css";
+
+import React from "react";
 
 export default function TutorialTable({ rowInfo }) {
   if (rowInfo.id % 2 === 0) {
@@ -17,15 +18,13 @@ export default function TutorialTable({ rowInfo }) {
     );
   }
   return (
-    <React.Fragment>
-      <tr className="text-center">
-        <td>{rowInfo.id}</td>
-        <td>{rowInfo.topic}</td>
-        <td>{rowInfo.source}</td>
-        <td>
-          <a href={rowInfo.tut_link}>VISIT</a>
-        </td>
-      </tr>
-    </React.Fragment>
+    <tr className="text-center">
+      <td>{rowInfo.id}</td>
+      <td>{rowInfo.topic}</td>
+      <td>{rowInfo.source}</td>
+      <td>
+        <a href={rowInfo.tut_link}>VISIT</a>
+      </td>
+    </tr>
   );
 }

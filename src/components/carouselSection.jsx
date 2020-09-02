@@ -1,11 +1,11 @@
 import { Carousel, Container, Image } from "react-bootstrap";
 import React, { Component } from "react";
 
-// import styled from "styled-components";
+import styled from "styled-components";
 
-// const CarouselContainer = styled(Container)`
-//   height: 80%;
-// `;
+const CarouselContainer = styled(Container)`
+  height: 80%;
+`;
 
 class CarouselMapped extends Component {
   state = {
@@ -30,7 +30,7 @@ class CarouselMapped extends Component {
   };
   render() {
     return (
-      <Container id="home">
+      <CarouselContainer id="home">
         <Carousel interval={2000}>
           {this.state.carouselImages.map((image) => (
             <Carousel.Item>
@@ -43,7 +43,7 @@ class CarouselMapped extends Component {
             </Carousel.Item>
           ))}
         </Carousel>
-      </Container>
+      </CarouselContainer>
     );
   }
 }

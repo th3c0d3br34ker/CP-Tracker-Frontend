@@ -1,7 +1,7 @@
+import { Button, Container, Row } from "react-bootstrap";
 import React, { Component } from "react";
-import axios from "axios";
 
-import { Container, Button, Row } from "react-bootstrap";
+import axios from "axios";
 
 class Subscribe extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class Subscribe extends Component {
               id="emailBox"
               type="text"
               placeholder="Enter Your Email Address"
-              size="40"
+              size="30"
               defaultValue={this.state.email}
               onChange={this.handleChange}
             />

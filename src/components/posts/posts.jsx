@@ -1,10 +1,9 @@
 import React, { Component } from "react";
+
 import Axios from "axios";
-
 import { Container } from "react-bootstrap";
-
-import PostCard from "./postCard.jsx";
 import Loading from "../../elements/loading/loading.jsx";
+import PostCard from "./postCard.jsx";
 
 class Posts extends Component {
   state = {

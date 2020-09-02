@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import CarouselMapped from "../components/carouselSection.jsx";
 import Footer from "../components/footer/footer.jsx";
 import Header from "../components/header/header.jsx";
-import MiddleGreeting from "../components/midSection/midSection.jsx";
+import MiddleGreeting from "../components/midSection.jsx";
 import Posts from "../components/posts/posts.jsx";
 
 class HomePage extends Component {

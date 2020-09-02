@@ -1,8 +1,26 @@
+import { Col, Container, Row } from "react-bootstrap";
 import React, { Component } from "react";
 
-import { Container, Row, Col } from "react-bootstrap";
+import styled from "styled-components";
 
-class MidGreeting extends Component {
+const MidSectionContainer = styled(Container)`
+  border-top: 1px solid black;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledRow = styled(Row)`
+  padding: 0.5rem;
+`;
+
+const PracticeWrapper = styled(Col)`
+  padding-top: 0.5rem;
+  justify-content: space-between;
+`;
+
+class MiddleGreeting extends Component {
   state = {
     text1:
       "There is a lot of material out there for learning Coding. So don't worry. We have prepared different tracks for learning coding which covers all the necessary concepts and questions you have to do for mastering it.",
@@ -13,30 +31,26 @@ class MidGreeting extends Component {
   };
   render() {
     return (
-      <Container className="mid-section-div">
-        <div className=" flex-column">
-          <Row className="p-2">
-            <Container className="border-top pt-2">
-              <div className="justify-content-between">
-                <h2>We help you to practise!</h2>
-                <p>{this.state.text1}</p>
-              </div>
-            </Container>
-          </Row>
-          <Row className="p-2">
-            <Col sm={6}>
-              <h4>Our Mission</h4>
-              <p>{this.state.text2}</p>
-            </Col>
-            <Col sm={6}>
-              <h4>Our Vision</h4>
-              <p>{this.state.text3}</p>
-            </Col>
-          </Row>
-        </div>
-      </Container>
+      <MidSectionContainer>
+        <StyledRow>
+          <PracticeWrapper>
+            <h2>We help you to practise!</h2>
+            <p>{this.state.text1}</p>
+          </PracticeWrapper>
+        </StyledRow>
+        <StyledRow>
+          <Col sm={6}>
+            <h4>Our Mission</h4>
+            <p>{this.state.text2}</p>
+          </Col>
+          <Col sm={6}>
+            <h4>Our Vision</h4>
+            <p>{this.state.text3}</p>
+          </Col>
+        </StyledRow>
+      </MidSectionContainer>
     );
   }
 }
 
-export default MidGreeting;
+export default MiddleGreeting;

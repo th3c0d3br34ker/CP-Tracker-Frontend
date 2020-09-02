@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Axios from "axios";
 import { Container, Row } from "react-bootstrap";
+import React, { Component } from "react";
 
-import TutorialTable from "../../elements/tutorialTable/tutorialTable.jsx";
+import Axios from "axios";
 import Loading from "../../elements/loading/loading.jsx";
+import TutorialTable from "../../elements/tutorialTable/tutorialTable.jsx";
 
 class Tutorial extends Component {
   state = {
@@ -24,14 +24,17 @@ class Tutorial extends Component {
   }
 
   render() {
-    return (
-      <Container className="p-4">
-        <h2 className="text-center p-2">Tutorials</h2>
-        {this.state.isLoading ? (
-          <div className="center-div">
-            <Loading />
-          </div>
-        ) : (
+    if (this.state.rowsTutorials && this.state.isLoading) {
+      return (
+        <div className="center-div">
+          <Loading />
+        </div>
+      );
+    }
+    if (this.state.rowsTutorials.length > 0) {
+      return (
+        <Container className="p-4">
+          <h2 className="text-center p-2">Tutorials</h2>
           <Row>
             <table className="content-table">
               <thead>
@@ -49,9 +52,11 @@ class Tutorial extends Component {
               </tbody>
             </table>
           </Row>
-        )}
-      </Container>
-    );
+        </Container>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
