@@ -1,9 +1,0 @@
-@import "./components/header/header.css";
-
-@import "./components/posts/postCard.css";
-
-@import "./components/footer/footer.css";
-
-.border-none {
-  border: none;
-}
