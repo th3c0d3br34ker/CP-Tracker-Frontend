@@ -10,8 +10,8 @@ const Posts = ({ className }) => {
 
   useEffect(() => {
     axios({
-      method: "get",
-      url: "/postcard",
+      method: "GET",
+      url: "/postcard/",
     })
       .then((response) => {
         setPost(response.data);
