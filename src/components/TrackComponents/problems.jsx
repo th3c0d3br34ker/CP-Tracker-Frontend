@@ -1,7 +1,35 @@
 import { Fragment, useEffect, useState } from "react";
+import { makeStyles, withStyles } from "@material-ui/core";
 
-import { Table } from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import { Skeleton } from "@material-ui/lab";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
 import axios from "../../axios";
+
+const useStyles = makeStyles({
+  heading: {
+    textAlign: `center`,
+    borderBottom: `1px solid black`,
+    paddingBottom: `28px`,
+  },
+  tableContainer: {
+    margin: `20px 0`,
+    border: `2px solid black`,
+  },
+});
+
+const StyledTableRow = withStyles((theme) => ({
+  root: {
+    "&:nth-of-type(odd)": {
+      backgroundColor: theme.palette.action.hover,
+    },
+  },
+}))(TableRow);
 
 const ProblemTable = ({ rowInfo }) => {
   const {
@@ -13,38 +41,25 @@ const ProblemTable = ({ rowInfo }) => {
     sol_link,
   } = rowInfo;
 
-  if (id % 2 === 0) {
-    return (
-      <tr className="active-row text-center">
-        <td>{id}</td>
-        <td>{topic}</td>
-        <td>{difficulty_level}</td>
-        <td>
-          <a href={prob_link}>{prob_name}</a>
-        </td>
-        <td>
-          <a href={sol_link}>SOLUTION</a>
-        </td>
-      </tr>
-    );
-  }
   return (
-    <tr>
-      <td>{id}</td>
-      <td>{topic}</td>
-      <td>{difficulty_level}</td>
-      <td>
+    <StyledTableRow>
+      <TableCell align="center">{id}</TableCell>
+      <TableCell align="center">{topic}</TableCell>
+      <TableCell align="center">{difficulty_level}</TableCell>
+      <TableCell align="center">
         <a href={prob_link}>{prob_name}</a>
-      </td>
-      <td>
+      </TableCell>
+      <TableCell align="center">
         <a href={sol_link}>SOLUTION</a>
-      </td>
-    </tr>
+      </TableCell>
+    </StyledTableRow>
   );
 };
 
 const Problems = ({ url }) => {
-  const [problems, setProblems] = useState([]);
+  const classes = useStyles();
+
+  const [problems, setProblems] = useState([1, 2, 3, 4]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -52,7 +67,6 @@ const Problems = ({ url }) => {
       method: "GET",
       url: url,
     }).then((response) => {
-      console.log(response.data);
       setProblems(response.data);
       setIsLoading(false);
     });
@@ -60,29 +74,51 @@ const Problems = ({ url }) => {
   }, []);
 
   return (
-    <Fragment>
-      <h2>Problems</h2>
-      {isLoading ? (
-        <h2>Loading</h2>
-      ) : (
-        <Table>
-          <thead>
-            <tr>
-              <th>Sr.</th>
-              <th>Topics</th>
-              <th>Difficulty Level</th>
-              <th>Problem Name</th>
-              <th>Solution</th>
-            </tr>
-          </thead>
-          <tbody>
-            {problems.map((row) => (
-              <ProblemTable key={row.id} rowInfo={row} />
-            ))}
-          </tbody>
-        </Table>
-      )}
-    </Fragment>
+    <TableContainer component={Paper} className={classes.tableContainer}>
+      <h2 className={classes.heading}>Problems</h2>
+
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell align="center">Sr.</TableCell>
+            <TableCell align="center">Topics</TableCell>
+            <TableCell align="center">Difficulty Level</TableCell>
+            <TableCell align="center">Problem Name</TableCell>
+            <TableCell align="center">Solution</TableCell>
+          </TableRow>
+        </TableHead>
+
+        <TableBody>
+          {problems.map((row, i) => {
+            return (
+              <Fragment key={i}>
+                {isLoading ? (
+                  <StyledTableRow>
+                    <TableCell>
+                      <Skeleton width="100%" height="40px" />
+                    </TableCell>
+                    <TableCell>
+                      <Skeleton width="100%" height="40px" />
+                    </TableCell>
+                    <TableCell>
+                      <Skeleton width="100%" height="40px" />
+                    </TableCell>
+                    <TableCell>
+                      <Skeleton width="100%" height="40px" />
+                    </TableCell>
+                    <TableCell>
+                      <Skeleton width="100%" height="40px" />
+                    </TableCell>
+                  </StyledTableRow>
+                ) : (
+                  <ProblemTable key={row.id} rowInfo={row} />
+                )}
+              </Fragment>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 };
 

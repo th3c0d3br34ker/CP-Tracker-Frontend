@@ -95,11 +95,14 @@ const PostCard = ({ cardInfo, loading = false }) => {
           <div></div>
         </Skeleton>
       ) : (
-        <Button variant="outlined" color="inherit" className={classes.button}>
-          <Link to={link} className={classes.link}>
-            {`${heading} `}
-            <LeftArrow />
-          </Link>
+        <Button
+          variant="outlined"
+          color="inherit"
+          href={link}
+          className={classes.button}
+        >
+          {`${heading} `}
+          <LeftArrow />
         </Button>
       )}
     </Card>

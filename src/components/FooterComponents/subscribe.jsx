@@ -7,6 +7,7 @@ const useStyles = makeStyles({
   root: {
     textAlign: `center`,
     margin: `8px`,
+    maxWidth: `100%`,
   },
   input: {
     "color": `white`,

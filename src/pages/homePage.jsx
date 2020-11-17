@@ -33,7 +33,6 @@ const Home = () => {
 
   return (
     <Fragment>
-      <h1>Home</h1>
       <Posts className={classes.root} />
       <HomeBody />
     </Fragment>
