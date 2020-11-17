@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Container } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
 import PostCard from "./PostCard";
 import axios from "../axios";
 

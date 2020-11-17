@@ -1,10 +1,11 @@
-import { Container, Divider, makeStyles } from "@material-ui/core";
-
 import Community from "./FooterComponents/community";
 import Contact from "./FooterComponents/contact";
+import Container from "@material-ui/core/Container";
 import Copyright from "./FooterComponents/copyright";
 import Creators from "./FooterComponents/creators";
+import Divider from "@material-ui/core/Divider";
 import Subscribe from "./FooterComponents/subscribe";
+import makeStyles from "@material-ui/styles/makeStyles";
 
 const footerStyles = makeStyles({
   root: {

@@ -1,7 +1,8 @@
-import { Container, Divider, makeStyles } from "@material-ui/core";
-
+import Container from "@material-ui/core/Container";
+import Divider from "@material-ui/core/Divider";
 import { Fragment } from "react";
 import Posts from "../components/posts";
+import makeStyles from "@material-ui/styles/makeStyles";
 
 const useStyles = makeStyles({
   root: {

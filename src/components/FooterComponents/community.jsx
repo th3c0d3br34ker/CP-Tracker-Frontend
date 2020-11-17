@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-
-const { makeStyles } = require("@material-ui/core");
+import Link from "react-router-dom/Link";
+import makeStyles from "@material-ui/styles/makeStyles";
 
 const communityStyles = makeStyles({
   root: {

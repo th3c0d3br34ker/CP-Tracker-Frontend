@@ -1,6 +1,8 @@
-import { Button, Container, Input, makeStyles } from "@material-ui/core";
-
+import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
+import Input from "@material-ui/core/Input";
 import axios from "../../axios.js";
+import makeStyles from "@material-ui/styles/makeStyles";
 import { useState } from "react";
 
 const useStyles = makeStyles({

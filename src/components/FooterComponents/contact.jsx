@@ -1,4 +1,4 @@
-const { makeStyles } = require("@material-ui/core");
+import makeStyles from "@material-ui/styles/makeStyles";
 
 const contactStyles = makeStyles({
   root: {
