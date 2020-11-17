@@ -1,15 +1,14 @@
 import { Container, Divider, makeStyles } from "@material-ui/core";
 
-import Footer from "../components/Footer";
 import { Fragment } from "react";
 import Posts from "../components/posts";
-
-// import axios from "../axios";
 
 const useStyles = makeStyles({
   root: {
     display: `flex`,
     flexWrap: `wrap`,
+    justifyContent: `flex-start`,
+    margin: `auto`,
   },
   divider: {
     height: "2px",
@@ -37,7 +36,6 @@ const Home = () => {
       <h1>Home</h1>
       <Posts className={classes.root} />
       <HomeBody />
-      <Footer />
     </Fragment>
   );
 };

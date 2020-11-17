@@ -12,6 +12,7 @@ const footerStyles = makeStyles({
     backgroundColor: `#1c1c1c`,
     color: `white`,
     padding: `16px`,
+    maxWidth: `100%`,
   },
   row: {
     display: `flex`,

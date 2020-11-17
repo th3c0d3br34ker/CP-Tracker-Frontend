@@ -58,7 +58,6 @@ const Creators = () => {
           <a
             href={linkedin}
             target="_blank"
-            id
             rel="noopener noreferrer"
             className={classes.iconButton}
           >

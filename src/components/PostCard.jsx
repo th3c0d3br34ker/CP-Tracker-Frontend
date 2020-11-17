@@ -1,18 +1,22 @@
 import { Button, Card, CardMedia, Typography } from "@material-ui/core";
 
 import { Link } from "react-router-dom";
+import { Skeleton } from "@material-ui/lab";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   root: {
-    margin: `10px`,
-    padding: 16,
-    maxWidth: `300px`,
-    display: `flex`,
-    flexDirection: `column`,
-    justifyContent: `space-evenly`,
-    border: `1px solid black`,
-    boxShadow: `4px 4px 20px 0 rgba(0,0,0,0.8)`,
+    "margin": `10px`,
+    "padding": 16,
+    "maxWidth": `300px`,
+    "display": `flex`,
+    "flexDirection": `column`,
+    "justifyContent": `space-evenly`,
+    "border": `1px solid black`,
+    "boxShadow": `4px 4px 20px 0 rgba(0,0,0,0.8)`,
+    "&:hover": {
+      boxShadow: `4px 4px 40px 0 rgba(0,0,0,0.8)`,
+    },
   },
   media: {
     height: `180px`,
@@ -28,8 +32,12 @@ const useStyles = makeStyles({
     padding: 4,
   },
   button: {
-    width: `fit-content`,
-    margin: `40px auto 10px auto`,
+    "width": `fit-content`,
+    "margin": `40px auto 10px auto`,
+    "backgroundColor": `white`,
+    "&:hover": {
+      boxShadow: `4px 4px 20px 0 rgba(0,0,0,0.8)`,
+    },
   },
   body: {
     margin: `auto`,
@@ -48,30 +56,52 @@ const LeftArrow = () => (
   <i className="fa fa-arrow-right" aria-hidden="true"></i>
 );
 
-const PostCard = ({ cardInfo }) => {
+const PostCard = ({ cardInfo, loading = false }) => {
   const classes = useStyles();
 
   const { heading, image, alt, text, link } = cardInfo;
+
   return (
     <Card className={classes.root}>
-      <CardMedia
-        component="img"
-        image={image}
-        title={alt}
-        className={classes.media}
-      />
-      <Typography component="h1" className={classes.heading}>
-        {heading}
-      </Typography>
-      <Typography component="p" className={classes.body}>
-        {text}
-      </Typography>
-      <Button variant="outlined" color="inherit" className={classes.button}>
-        <Link to={link} className={classes.link}>
-          {`${heading} `}
-          <LeftArrow />
-        </Link>
-      </Button>
+      {loading ? (
+        <Skeleton variant="rect">
+          <div className={classes.media}></div>
+        </Skeleton>
+      ) : (
+        <CardMedia
+          component="img"
+          image={image}
+          title={alt}
+          className={classes.media}
+        />
+      )}
+      {loading ? (
+        <Skeleton width="100%" height="60px" />
+      ) : (
+        <Typography component="h1" className={classes.heading}>
+          {heading}
+        </Typography>
+      )}
+
+      {loading ? (
+        <Skeleton width="100%" height="120px" />
+      ) : (
+        <Typography component="p" className={classes.body}>
+          {text}
+        </Typography>
+      )}
+      {loading ? (
+        <Skeleton width="100%" height="40px">
+          <div></div>
+        </Skeleton>
+      ) : (
+        <Button variant="outlined" color="inherit" className={classes.button}>
+          <Link to={link} className={classes.link}>
+            {`${heading} `}
+            <LeftArrow />
+          </Link>
+        </Button>
+      )}
     </Card>
   );
 };
