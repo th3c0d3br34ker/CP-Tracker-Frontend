@@ -25,8 +25,8 @@ const useStyles = makeStyles({
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
+    "&:nth-of-type(even)": {
+      backgroundColor: `#d1d5da`,
     },
   },
 }))(TableRow);

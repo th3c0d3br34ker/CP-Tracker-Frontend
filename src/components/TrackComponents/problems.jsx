@@ -24,13 +24,13 @@ const useStyles = makeStyles({
   },
 });
 
-const StyledTableRow = withStyles((theme) => ({
+const StyledTableRow = withStyles({
   root: {
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
+    "&:nth-of-type(even)": {
+      backgroundColor: `#d1d5da`,
     },
   },
-}))(TableRow);
+})(TableRow);
 
 const ProblemTable = ({ rowInfo }) => {
   const {
