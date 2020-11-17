@@ -2,8 +2,8 @@ import { Route, HashRouter as Router, Switch } from "react-router-dom";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Home from "./pages/HomePage.jsx";
-import Track from "./pages/TrackPage.jsx";
+import Home from "./pages/homePage.jsx";
+import Track from "./pages/trackPage.jsx";
 
 const App = () => {
   return (
